@@ -1,0 +1,163 @@
+/*
+   CSS styling examples for the Vaadin app.
+   Visit https://vaadin.com/docs/flow/theme/theming-overview.html and
+   https://vaadin.com/themes/lumo for more information.
+*/
+
+/* Main layout */
+a[highlight] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.header {
+    padding: 0 var(--lumo-space-s);
+    background-color: rgb(59, 47, 99);
+}
+
+.drawer-toggle {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.logo-layout {
+    background-color: rgb(244, 244, 244);
+}
+
+.app-logo {
+    font-size: 27px;
+    color: rgb(67, 0, 152);
+    font-weight: light;
+    margin: var(--lumo-space-s);
+}
+
+.view-title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    margin: var(--lumo-space-s);
+}
+
+.logout-link {
+    font-size:15px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    margin: var(--lumo-space-s);
+}
+
+.header h1.current-username {
+    font-size: 15px;
+    font-weight: light;
+    color: rgb(234, 233, 241);
+    margin: var(--lumo-space-s);
+}
+
+/* Dashboard view */
+.dashboard-view .contact-stats {
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+/* List view */
+.list-view .content {
+    display: flex;
+}
+
+.list-view .contact-grid {
+    flex: 4;
+    font-size: 13px;
+}
+
+.list-view .contact-form {
+    flex: 1;
+    padding: var(--lumo-space-m);
+    font-size: 11px;
+}
+
+@media all and (max-width: 1100px) {
+    .list-view.editing .toolbar,
+    .list-view.editing .contact-grid {
+        display: none;
+    }
+}
+
+/*LaboratoryStaffMembers View */
+.laboratoryStaff-view .content {
+    display: flex;
+}
+
+.laboratoryStaff-view .laboratoryStaff-grid {
+    flex: 4;
+    font-size: 13px;
+}
+
+.laboratoryStaff-view .staffMember-form {
+    flex: 1;
+    padding: var(--lumo-space-m);
+    font-size: 11px;
+}
+
+@media all and (max-width: 1100px) {
+    .laboratoryStaff-view.editing .toolbar,
+    .laboratoryStaff-view.editing .staffMember-form {
+        display: none;
+    }
+}
+
+/* Login view */
+.login-view {
+    padding: var(--lumo-space-s);
+    space: var(--lumo-space-s);
+}
+
+/* Register view */
+.register-view .register-box {
+    background-color: rgb(45, 60, 81);
+}
+
+.vertical-drawer {
+    background-color: rgb(244, 244, 244);
+}
+
+.list-link {
+    color: rgb(68, 68, 68);
+}
+
+.dashboard-link {
+    color: rgb(68, 68, 68);
+}
+
+.laboratoryStaff-link {
+    color: rgb(68, 68, 68);
+}
+
+.biologicalMaterialBank-link {
+    color: rgb(68, 68, 68);
+}
+
+.vialCode-notification {
+    color: red;
+    font-size: 18px;
+}
+
+.statistics-toolbar {
+    background-color: rgb(244, 244, 244);
+    padding: var(--lumo-space-s);
+}
+
+.statistics-toolbar .total-vials-stats {
+    font-size:21px;
+    font-weight: 600;
+    color: rgb(59, 47, 99);
+}
+
+.statistics-toolbar .best-titre-stats {
+    font-size:21px;
+    font-weight: 600;
+    color: rgb(59, 47, 99);
+}
+
+.toolbar .vial-stats {
+    font-size:20px;
+    font-weight: 600;
+    color: rgb(59, 47, 99);
+}
