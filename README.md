@@ -9,7 +9,7 @@ Make the following queries on the database:
 
 insert into role values ('1', 'ADMIN');
 
-insert into role values ('2', 'MICROBIOLOGIST);
+insert into role values ('2', 'MICROBIOLOGIST');
 
 insert into users values ('1', '1', 'john.smith@labmanager.com', 
 'true', 'John', 'Smith', '$2a$04$7YT/pMWkuQHQzc2Odg4szOVLk6qO8N6K/WYBu7HrdBQcWytEUvX22', 'Admin', '1');

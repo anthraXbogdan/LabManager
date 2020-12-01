@@ -1,4 +1,4 @@
-package com.vaadin.tutorial.crm.backend.services.contactService;
+package com.vaadin.tutorial.crm.backend.services.clientService;
 
 import com.vaadin.tutorial.crm.backend.entities.Client;
 import com.vaadin.tutorial.crm.backend.entities.Company;

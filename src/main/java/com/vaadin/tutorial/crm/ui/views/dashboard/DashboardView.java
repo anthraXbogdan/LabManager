@@ -8,7 +8,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.tutorial.crm.backend.services.activeSubstanceService.ActiveSubstanceService;
 import com.vaadin.tutorial.crm.backend.services.companyService.CompanyService;
-import com.vaadin.tutorial.crm.backend.services.contactService.ClientService;
+import com.vaadin.tutorial.crm.backend.services.clientService.ClientService;
 import com.vaadin.tutorial.crm.ui.MainLayout;
 
 @Route(value = "dashboard", layout = MainLayout.class)
