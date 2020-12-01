@@ -20,4 +20,15 @@ Username: Admin
 
 Password: admin
 
+![](src/main/webapp/login-view.jpg)
+
+![](src/main/webapp/dashboard-view.jpg)
+
+![](src/main/webapp/clients-list-view.jpg)
+
+![](src/main/webapp/biological-material-bank-view.jpg)
+
+![](src/main/webapp/new-vial-view.jpg)
+
+
 
