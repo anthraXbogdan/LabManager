@@ -1,3 +1,14 @@
+### Utilized tech
+
+LabMANAGER uses SpringBoot framework for backend, implementing:
+
+    - SpringBoot Security for app access control;
+    - SpringBoot JPA and Hibernate for data persistence.
+    
+LabMANAGER uses Vaadin Framework for frontend.
+
+LabMANAGER uses Maven as building tool.
+
 ### Creating the database for the project
 
 Before starting the project create a PostgreSQL database. You can give it any name (ex: "lab-manager-database")
@@ -11,14 +22,15 @@ insert into role values ('1', 'ADMIN');
 
 insert into role values ('2', 'MICROBIOLOGIST');
 
-insert into users values ('1', '1', 'john.smith@labmanager.com', 
-'true', 'John', 'Smith', '$2a$04$7YT/pMWkuQHQzc2Odg4szOVLk6qO8N6K/WYBu7HrdBQcWytEUvX22', 'Admin', '1');
+insert into users values ('1', '1', 'john.smith@labmanager.com', 'true', 'John', 'Smith', '$2a$04$7YT/pMWkuQHQzc2Odg4szOVLk6qO8N6K/WYBu7HrdBQcWytEUvX22', 'Admin', '1');
 
 ### Logging into the application
 
 Username: Admin
 
 Password: admin
+
+### App screenshots
 
 ![](src/main/webapp/login-view.jpg)
 
