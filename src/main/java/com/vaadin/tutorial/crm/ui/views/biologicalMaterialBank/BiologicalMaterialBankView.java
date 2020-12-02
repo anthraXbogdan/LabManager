@@ -43,8 +43,8 @@ public class BiologicalMaterialBankView extends VerticalLayout {
     private final Span totalVials = new Span();
     private final Span bestTitre = new Span();
     private final Span vialsStats = new Span();
-    Icon statsIcon = new Icon(VaadinIcon.PILL);
-    Icon newVialIcon = new Icon(VaadinIcon.FLASK);
+    private final Icon statsIcon = new Icon(VaadinIcon.PILL);
+    private final Icon newVialIcon = new Icon(VaadinIcon.FLASK);
 
     public BiologicalMaterialBankView(ActiveSubstanceService activeSubstanceService) {
         this.activeSubstanceService = activeSubstanceService;

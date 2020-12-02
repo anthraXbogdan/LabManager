@@ -20,16 +20,9 @@ import java.util.List;
 
 public class StaffMemberForm extends FormLayout {
 
-    TextField firstName = new TextField("First name");
-    TextField lastName = new TextField("Last name");
-    TextField email = new TextField("Email");
-    PasswordField password = new PasswordField("Password");
-    TextField username = new TextField("Username");
-    ComboBox<Role> role = new ComboBox<>("Role");
-
-    Button save = new Button("Save");
-    Button delete = new Button("Delete");
-    Button close = new Button("Cancel");
+    private final Button save = new Button("Save");
+    private final Button delete = new Button("Delete");
+    private final Button close = new Button("Cancel");
 
     private User user;
 
@@ -40,8 +33,15 @@ public class StaffMemberForm extends FormLayout {
 
         binder.bindInstanceFields(this); // bindInstanceFields method matches fields in
                                                             // User and StaffMemberForm based on their names.
+        ComboBox<Role> role = new ComboBox<>("Role");
         role.setItems(userRoles);
         role.setItemLabelGenerator(Role::getRole);
+
+        TextField firstName = new TextField("First name");
+        TextField lastName = new TextField("Last name");
+        TextField email = new TextField("Email");
+        PasswordField password = new PasswordField("Password");
+        TextField username = new TextField("Username");
 
         add(firstName, lastName, email, password, username, role, createButtonsLayout());
     }

@@ -17,16 +17,13 @@ public class DashboardView extends VerticalLayout {
 
     private final ClientService clientService;
     private final ActiveSubstanceService activeSubstanceService;
-    private final CompanyService companyService;
 
 
     public DashboardView(ClientService clientService, CompanyService companyService, ActiveSubstanceService activeSubstanceService) {
         this.clientService = clientService;
-        this.companyService = companyService;
         this.activeSubstanceService = activeSubstanceService;
         addClassName("dashboard-view");
         setSizeFull();
-        //setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
 
@@ -38,6 +35,7 @@ public class DashboardView extends VerticalLayout {
         add(bioreactorImage);
     }
 
+    // methods for future utilization
     private Component getContactStats() {
         Span stats = new Span(clientService.count() + " contacts");
         stats.addClassName("contact-stats");

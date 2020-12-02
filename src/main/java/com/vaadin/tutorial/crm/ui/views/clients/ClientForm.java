@@ -20,16 +20,9 @@ import java.util.List;
 
 public class ClientForm extends FormLayout {
 
-    TextField firstName = new TextField("First Name");
-    TextField lastName = new TextField("Last Name");
-    EmailField email = new EmailField("Email");
-    ComboBox<Client.Status> status = new ComboBox<>("Status");
-    ComboBox<Company> company = new ComboBox<>("Company");
-
-    Button save = new Button("Save");
-    Button delete = new Button("Delete");
-    Button close = new Button("Cancel");
-
+    private final Button save = new Button("Save");
+    private final Button delete = new Button("Delete");
+    private final Button close = new Button("Cancel");
 
     private Client client;
 
@@ -41,12 +34,20 @@ public class ClientForm extends FormLayout {
 
     public ClientForm(List<Company> companies) {
         addClassName("contact-form");
+
         binder.bindInstanceFields(this); // bindInstanceFields method matches fields in
                                                             // Contact and ContactForm based on their names.
 
+        ComboBox<Company> company = new ComboBox<>("Company");
         company.setItems(companies);
         company.setItemLabelGenerator(Company::getName);
+
+        ComboBox<Client.Status> status = new ComboBox<>("Status");
         status.setItems(Client.Status.values());
+
+        TextField firstName = new TextField("First Name");
+        TextField lastName = new TextField("Last Name");
+        EmailField email = new EmailField("Email");
 
         add(firstName, lastName, email, status, company, createButtonsLayout());
     }

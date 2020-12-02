@@ -104,6 +104,7 @@ public class ClientsListView extends VerticalLayout {
         grid.setSizeFull();
         grid.removeColumnByKey("company");
         grid.setColumns("firstName", "lastName", "email", "status");
+
         grid.addColumn(contact -> {
             Company company = contact.getCompany();
             return company == null ? "-" : company.getName();

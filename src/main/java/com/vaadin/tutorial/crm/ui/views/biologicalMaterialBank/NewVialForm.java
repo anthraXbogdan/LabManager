@@ -23,18 +23,9 @@ import javax.validation.constraints.NotEmpty;
 
 public class NewVialForm extends FormLayout {
 
-    TextField activeSubstance = new TextField("Active Substance");
-    TextField strainName = new TextField("Strain Name");
-    TextField vialCode = new TextField("Vial Code");
-    @NotEmpty
-    DatePicker date = new DatePicker("Lyophilisation date");
-    TextField colonyNo = new TextField("Colony Number");
-    TextField titre = new TextField("Titre");
-
-    Button save = new Button("Add Vial");
-    Button cancel = new Button("Cancel");
-
-    Icon newVialIcon = new Icon(VaadinIcon.FLASK);
+    private final Button save = new Button("Add Vial");
+    private final Button cancel = new Button("Cancel");
+    private final Icon newVialIcon = new Icon(VaadinIcon.FLASK);
 
     private ActiveSubstance substance;
     private final ActiveSubstanceService activeSubstanceService;
@@ -44,8 +35,17 @@ public class NewVialForm extends FormLayout {
     public NewVialForm(ActiveSubstanceService activeSubstanceService) {
         this.activeSubstanceService = activeSubstanceService;
         addClassName("contact-form");
+
         binder.bindInstanceFields(this); // bindInstanceFields method matches fields in
                                                             // Contact and ContactForm based on their names.
+
+        TextField activeSubstance = new TextField("Active Substance");
+        TextField strainName = new TextField("Strain Name");
+        TextField vialCode = new TextField("Vial Code");
+        @NotEmpty
+        DatePicker date = new DatePicker("Lyophilisation date");
+        TextField colonyNo = new TextField("Colony Number");
+        TextField titre = new TextField("Titre");
 
         add(activeSubstance, strainName, vialCode, date, colonyNo, titre, createButtonsLayout());
     }
@@ -64,6 +64,7 @@ public class NewVialForm extends FormLayout {
                 e.printStackTrace();
             }
         });
+
         cancel.addClickListener(event -> fireEvent(new CloseEvent(this)));
         binder.addStatusChangeListener(e -> save.setEnabled(binder.isValid()));
 
@@ -72,6 +73,7 @@ public class NewVialForm extends FormLayout {
 
     private void validateAndSave() throws ValidationException {
         binder.writeBean(substance);
+
         if (activeSubstanceService.codeValidator(substance)) {
             fireEvent(new SaveEvent(this, substance));
         } else {
@@ -84,6 +86,7 @@ public class NewVialForm extends FormLayout {
             notification.setPosition(Notification.Position.MIDDLE);
             notification.open();
         }
+
     }
 
     void setNewVial(ActiveSubstance substance) {
